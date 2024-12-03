@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: example-dot-net-app
+spec:
+  subdomain: example-dot-net-app
+  to:
+    kind: Service
+    name: example-dot-net-app
+  port:
+    targetPort: https
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

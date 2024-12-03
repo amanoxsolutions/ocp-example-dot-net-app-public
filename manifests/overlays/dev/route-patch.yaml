@@ -1,0 +1,6 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: example-dot-net-app
+spec:
+  subdomain: example-dot-net-app-dev
